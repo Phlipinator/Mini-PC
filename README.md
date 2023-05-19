@@ -8,9 +8,7 @@ The following components are needed for the project:
 - 1 8x8 Pixel Matrix
 - 3 12x12 Buttons
 - 3D printed housing and bottom-plate
-The wiring is done as shown in the included circut diagram:
-![circut diagram](/Circut Diagram.png)
-
+The wiring is done as shown in the included circut diagram.
 
 ## Code
 The communication works with MQTT, which means a broker is necessary to exchange messages. The parameters for that have to be changed in the code at the specified lines at the top.
