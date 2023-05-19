@@ -8,7 +8,8 @@ The following components are needed for the project:
 - 1 8x8 Pixel Matrix
 - 3 12x12 Buttons
 - 3D printed housing and bottom-plate
-The wiring is done as shown in the included circut diagarm:
+The wiring is done as shown in the included circut diagram:
+![circut diagram](/Circut Diagram.png)
 
 
 ## Code
