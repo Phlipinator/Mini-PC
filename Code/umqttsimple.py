@@ -1,4 +1,6 @@
 # Source: https://github.com/RuiSantosdotme/ESP-MicroPython/blob/master/code/MQTT/umqttsimple.py
+# Careful keepalive has been changed from 0 to 30
+
 try:
     import usocket as socket
 except:
@@ -11,7 +13,7 @@ class MQTTException(Exception):
 
 class MQTTClient:
 
-    def __init__(self, client_id, server, port=0, user=None, password=None, keepalive=0,
+    def __init__(self, client_id, server, port=0, user=None, password=None, keepalive=30,
                  ssl=False, ssl_params={}):
         if port == 0:
             port = 8883 if ssl else 1883
