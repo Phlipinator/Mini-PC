@@ -16,6 +16,8 @@ def display(animation):
         smile()
     elif animation == "sad":
         sad()
+    elif animation == "received":
+        received()
     else:
         print("Unhandeled animation")      
             
@@ -228,4 +230,16 @@ def sadEight():
     screen.pixel(1,6,1)
     screen.pixel(5,2,1)
     screen.pixel(5,5,1)
+    screen.show()
+
+def received():
+    screen.fill(0)
+    screen.pixel(3,0,1)
+    screen.pixel(2,1,1)
+    screen.pixel(1,2,1)
+    screen.pixel(2,3,1)
+    screen.pixel(3,4,1)
+    screen.pixel(4,5,1)
+    screen.pixel(5,6,1)
+    screen.pixel(6,7,1)
     screen.show()

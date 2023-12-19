@@ -33,10 +33,15 @@ topic2pub = b'miniPC_Philipp'
 def sub_cb(topic, msg):
     if msg == b'smile':
         animations.display("smile")
+        publishMsg('received')
     elif msg == b'heart':
         animations.display("heart")
+        publishMsg('received')
     elif msg == b'sad':
         animations.display("sad")
+        publishMsg('received')
+    elif msg == b'received':
+        animations.display("received")
     else:
         print('Unhandeled Message')
 
