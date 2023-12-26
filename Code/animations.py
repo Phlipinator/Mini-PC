@@ -1,6 +1,7 @@
-from machine import Pin, SPI
-from max7219 import Max7219
 import time
+
+from machine import SPI, Pin
+from max7219 import Max7219
 
 # Initialisation
 spi = SPI(1, baudrate=10000000)
@@ -8,18 +9,6 @@ screen = Max7219(8, 8, spi, Pin(15))
 
 waitTime = 0.3
 waitTimeShort = 0.1
-    
-def display(animation): 
-    if animation == "heart":
-        heart()
-    elif animation == "smile":
-        smile()
-    elif animation == "sad":
-        sad()
-    elif animation == "received":
-        received()
-    else:
-        print("Unhandeled animation")      
             
 def heart():
     heartOne()

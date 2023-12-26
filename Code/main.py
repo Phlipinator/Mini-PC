@@ -3,11 +3,12 @@
 # I broke it apart however into different files so I can more easily debug.
 
 import time
-from umqttsimple import MQTTClient
+
+import animations
 import machine
 import ubinascii
-import animations
 from machine import Pin
+from umqttsimple import MQTTClient
 
 # To create an MQTT client, we need to get the ESP unique ID
 client_id = ubinascii.hexlify(machine.unique_id())
@@ -32,16 +33,16 @@ topic2pub = b'miniPC_Philipp'
 # This callback function is called, when a message is received and should then begin handling that message.
 def sub_cb(topic, msg):
     if msg == b'smile':
-        animations.display("smile")
+        animations.smile()
         publishMsg('received')
     elif msg == b'heart':
-        animations.display("heart")
+        animations.heart()
         publishMsg('received')
     elif msg == b'sad':
-        animations.display("sad")
+        animations.sad()
         publishMsg('received')
     elif msg == b'received':
-        animations.display("received")
+        animations.received()
     else:
         print('Unhandeled Message')
 
