@@ -1,6 +1,5 @@
 # Code to initialize the MQTT client.
 # Built upon code from: https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/ 
-# I broke it apart however into different files so I can more easily debug.
 
 import time
 
@@ -13,8 +12,7 @@ from umqttsimple import MQTTClient
 # To create an MQTT client, we need to get the ESP unique ID
 client_id = ubinascii.hexlify(machine.unique_id())
 
-# MQTT Broker Data for PWP project
-# Home Assistant with mosquitto addon (remember to open port 1883 in the router)
+# MQTT Broker Data
 mqtt_server = 'PUT MQTT SERVER HERE'
 mqtt_port = 1883
 mqtt_user = 'PUT USER HERE'
