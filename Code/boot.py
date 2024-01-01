@@ -1,16 +1,15 @@
 # Import os in order to interact with files on the esp.
+import gc
 import os
 
-# Other imports:
+import esp
 import network
 
 # Turn off vendor OS debugging messages, in order to see only own debugging.
-import esp
 esp.osdebug(None)
 
 # Run the garbage collector to reclaim memory occupied by objects that are no longer in use by the program.
 # This is useful to save space in the flash memory
-import gc
 gc.collect()
 
 # Network credentials. (Change to yours.)
