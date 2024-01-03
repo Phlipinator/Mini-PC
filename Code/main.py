@@ -65,7 +65,7 @@ def restart_and_reconnect():
     time.sleep(10)
     machine.reset()
 
-# Publishes a message to all topics listed in topics2pub.
+# Publishes a message to topic2pub.
 def publishMsg(msg):
     try:
         client.publish(topic2pub, str.encode(msg))
@@ -94,7 +94,7 @@ except OSError as e:
     print('Failed MQTT connection with error: %s' % e)
     restart_and_reconnect() # Try again later on fail.
 
-
+# Initialize Buttons
 buttonOne = Pin(1, Pin.IN, Pin.PULL_UP)
 one = True
 
